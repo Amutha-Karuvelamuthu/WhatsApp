@@ -1,0 +1,30 @@
+
+  <swiper-container [modules]="swiperModules"
+  [slidesPerView]="2.3"
+  [keyboard]="true" >
+ 
+<swiper-slide *ngFor="let slide of slides">
+  <ion-card class="ion-text-center ">
+    <div class=" avatar-container ion-padding-vertical">
+    <ion-avatar  >
+      <img [src]="slide.banner" alt="">
+    </ion-avatar>
+  </div>
+    <ion-card-header>
+      <ion-card-title >
+            <ion-text color="dark" class="name">
+              <h6>{{slide.name}}</h6>
+
+              </ion-text>
+          </ion-card-title>
+
+    </ion-card-header>
+    <ion-button fill="clear" color="success">
+      Follow
+    </ion-button>
+    </ion-card>
+
+</swiper-slide>
+
+  </swiper-container>
+  

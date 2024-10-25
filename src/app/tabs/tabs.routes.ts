@@ -1,36 +1,36 @@
-import { Routes } from '@angular/router';
-import { TabsPage } from './tabs.page';
-
-export const routes: Routes = [
-  {
-    path: 'tabs',
-    component: TabsPage,
-    children: [
-      {
-        path: 'tab1',
-        loadComponent: () =>
-          import('../tab1/tab1.page').then((m) => m.Tab1Page),
-      },
-      {
-        path: 'tab2',
-        loadComponent: () =>
-          import('../tab2/tab2.page').then((m) => m.Tab2Page),
-      },
-      {
-        path: 'tab3',
-        loadComponent: () =>
-          import('../tab3/tab3.page').then((m) => m.Tab3Page),
-      },
-      {
-        path: '',
-        redirectTo: '/tabs/tab1',
-        pathMatch: 'full',
-      },
-    ],
-  },
-  {
+import { Routes } from '@angular/router'
+import { TabsPage } from './tabs.page'
+export const routes :Routes =[
+{
+    path:'tabs',
+    component:TabsPage,
+    children:[
+        {
+            path:'chats',
+            loadComponent:()=> import('../chats/chats.page').then( m => m.ChatsPage)
+        },
+        {
+            path:'updates',
+            loadComponent:()=> import('../updates/updates.page').then( m => m.UpdatesPage)
+        },
+        {
+            path:'communities',
+            loadComponent:()=> import('../communities/communities.page').then( m => m.CommunitiesPage)
+        },
+        {
+            path:'calls',
+            loadComponent:()=> import('../calls/calls.page').then( m => m.CallsPage)
+        },
+    {
+        path:'',
+        redirectTo:'chats',
+        pathMatch:'full'
+    }
+    ]
+    },
+        {
     path: '',
-    redirectTo: '/tabs/tab1',
-    pathMatch: 'full',
-  },
-];
+    redirectTo: 'tabs',
+    pathMatch:'full'
+    }
+]

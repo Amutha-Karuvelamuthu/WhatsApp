@@ -1,0 +1,19 @@
+
+ion-card{
+    --box-shadow:none;
+    border-radius: 15px;
+}
+.avatar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // align-self: center;
+   
+}
+.name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ion-button{
+    text-transform: none;
+}

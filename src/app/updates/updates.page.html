@@ -1,0 +1,86 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title> Updates </ion-title>
+    <ion-buttons slot="end" color="light" class="ion-no-padding-horizontal">
+      <ion-button>
+        <ion-icon name="qr-code-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon
+          slot="icon-only"
+          name="camera-outline"
+          class="ion-padding"
+        ></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h2 class="ion-padding-horizontal">Status</h2>
+  <ion-item lines="none">
+    <ion-avatar class="avatar-container">
+      <img src="../../assets/images/profile1.jpeg" />
+      <ion-badge>+</ion-badge>
+    </ion-avatar>
+    <ion-label class="ion-padding-horizontal">
+      <ion-text color="dark">My status</ion-text>
+      <p>Tap to add status update</p>
+    </ion-label>
+  </ion-item>
+  <ion-text color="medium">
+    <p class="ion-padding-horizontal">Recent updates</p>
+  </ion-text>
+  <ion-list lines="none">
+    <ion-item lines="none" *ngFor="let contact of recent" class="recent">
+      <ion-avatar>
+        <img [src]="contact.img" />
+      </ion-avatar>
+      <ion-label class="ion-padding-horizontal"
+        ><ion-text> {{contact.name}} </ion-text>
+        <p>{{contact.date}}</p></ion-label
+      >
+    </ion-item>
+  </ion-list>
+
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" lines="none">
+        <ion-label color="medium">Viewed updates</ion-label>
+      </ion-item>
+      <div slot="content" class="viewed">
+        <ion-item lines="none" *ngFor="let contact of viewed">
+          <ion-avatar>
+            <img [src]="contact.img" />
+          </ion-avatar>
+          <ion-label class="ion-padding-horizontal">
+            <ion-text>{{contact.name}}</ion-text>
+            <p>{{contact.date}}</p>
+          </ion-label>
+        </ion-item>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+  <h3 class="ion-padding-horizontal">Channels</h3>
+  <ion-list class="ion-padding">
+  <!-- <ion-label class="ion-padding-horizontal" color="medium">
+    Stay updated on topics that matter to you. Find channels to follow below.
+  </ion-label> -->
+</ion-list>
+  <app-banner [slides]="slides"></app-banner>
+  <ion-button color="primary" shape="round" [strong]="true">Explore More</ion-button>
+  <ion-fab slot="fixed" horizontal="end" vertical="bottom">
+    <ion-fab-button color="light" size="small">
+      <ion-icon name="pencil"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="success">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

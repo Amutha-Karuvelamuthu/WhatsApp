@@ -1,0 +1,35 @@
+ion-searchbar{
+    --border-radius: 25px;
+    --box-shadow:none:
+
+}
+ion-button{
+    --box-shadow:none:
+}
+ion-title{
+    font-weight: bold;
+}
+// .name{
+//     font-weight: bold;
+// }
+.note-badge{
+    display: flex;
+    flex-direction: column;
+    color:white;
+}
+.round-badge{
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
+    align-self: center;
+}
+ion-fab-button{
+    --background:var(--ion-color-primary);
+    color:white;
+    --border-radius: 15px;
+}
+.msg{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 1.5rem;
+}

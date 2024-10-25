@@ -1,0 +1,25 @@
+.avatar-container {
+    position:relative;
+
+}
+.avatar-container ion-badge{
+    position: absolute;
+    border-radius: 50%;
+    align-self: baseline;
+    bottom:0;
+    right: 0;
+}
+.recent ion-avatar{
+    position: relative;
+    padding:2px;
+    border: 2px dashed rgb(12, 240, 153);
+}
+.viewed ion-avatar{
+    padding: 2px;
+    border: 2px solid rgb(193, 191, 194);
+
+}
+ion-fab-button{
+    color:white;
+    --border-radius: 15px;
+}
