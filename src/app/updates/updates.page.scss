@@ -2,17 +2,20 @@
     position:relative;
 
 }
-.avatar-container ion-badge{
+.avatar-container ion-button{
     position: absolute;
-    border-radius: 50%;
-    align-self: baseline;
-    bottom:0;
-    right: 0;
+    // transform: translateX(50%);
+    transform: translateY(50%);
+
+    margin-bottom:1px;
+    left: 20px;
 }
 .recent ion-avatar{
+    width: 40px;
+    height: 40px;
     position: relative;
     padding:2px;
-    border: 2px dashed rgb(12, 240, 153);
+    border: 2px dashed #00a884;
 }
 .viewed ion-avatar{
     padding: 2px;

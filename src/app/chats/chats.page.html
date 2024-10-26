@@ -1,6 +1,6 @@
 <ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
-    <ion-title color="success">
+    <ion-title color="primary">
      WhatsApp
     </ion-title>
     <ion-buttons slot="end" color="light"  class="ion-no-padding-horizontal">
@@ -18,11 +18,12 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar  color="light"placeholder="Ask Meta AI of Search" class="ion-no-border ion-padding-horizontal">
-    <!-- <ion-button slot="start" color="light">
-    <img src="../../assets/images/meta-logo.jpeg"height="30px" width="30px">
-    </ion-button> -->
-  </ion-searchbar>
+  <ion-item lines="none" class="ion-no-padding-horizontal">
+    <div #metaAI id ="metaAI" class="ion-no-padding"></div>
+    <ion-searchbar searchIcon="undefined"  color="light" placeholder="Ask Meta AI of Search" class="ion-no-border ion-no-padding-horizontal">
+    </ion-searchbar>
+  </ion-item>
+ 
   <div class="ion-padding">
   <ion-chip  shape="round" >All</ion-chip>
   <ion-chip  shape="round">Unread</ion-chip>
@@ -31,7 +32,7 @@
   </div>
   
   <ion-list class="ion-no-padding">
-    <!-- @for(contact of contacts;track i; let i=$index){ -->
+  
     <ion-item lines="none" *ngFor="let contact of contacts">
       <ion-avatar>
         <img [src]="contact.img" alt="">
@@ -40,7 +41,9 @@
 
         <ion-text class="name">{{contact.name}}</ion-text>      
 
-      <p class="msg" ><ion-icon *ngIf="!contact.badge == true" name="checkmark-done" slot="start" [color]="contact.checkmark ? 'secondary':'medium'"></ion-icon>{{contact.msg}}</p>
+      <p class="msg" >
+        <ion-icon *ngIf="!contact.badge == true" name="checkmark-done" slot="start" [color]="contact.checkmark ? 'secondary':'medium'">
+        </ion-icon>{{contact.msg}}</p>
     </ion-label>
     <div class="note-badge">
       <ion-note slot="end" [color]="contact.badge ? 'success':'medium'" >{{contact?.date}}</ion-note>
@@ -48,13 +51,17 @@
       <ion-badge slot="end" *ngIf="contact.status == true" color="primary" class="round-badge">{{contact.badge}}</ion-badge>
     </div>
     </ion-item>
-  <!-- } -->
+    <ion-item-divider class="ion-no-padding-vertical"></ion-item-divider>
+  <ion-note class="font-style ion-padding"><i class="material-icons icon-custom ion-no-padding-vertical">lock</i>
+    Your personal calls are <span>end-to-end encrypted</span></ion-note>
+    
+
   </ion-list>
   <ion-fab slot="fixed" horizontal="end" vertical="bottom">
     <ion-fab-button color="light" size="small">
       <img src="../../assets/images/meta-logo.jpeg" height="30px" width="30px">
     </ion-fab-button>
-    <ion-fab-button color="success">
+    <ion-fab-button color="primary">
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M440-400h80v-120h120v-80H520v-120h-80v120H320v80h120v120ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg>
     </ion-fab-button>
   </ion-fab>

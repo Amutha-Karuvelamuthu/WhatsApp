@@ -1,10 +1,7 @@
 <ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
-     Communities
-    </ion-title>
+    <ion-title> Communities </ion-title>
     <ion-buttons slot="end" color="light" class="ion-no-padding-horizontal">
-      
       <ion-button>
         <ion-icon name="qr-code-outline"></ion-icon>
       </ion-button>
@@ -23,9 +20,59 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
- <ion-card>
-  <ion-avatar>
-    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M0-240v-63q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H0Zm240 0v-65q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v65H240Zm540 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v63H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z"/></svg>
-  </ion-avatar>
- </ion-card>
+  <ion-card>
+    <ion-item>
+      <p class="groups"  >
+        <span class="material-symbols-outlined"
+          >groups</span>
+      </p>
+
+      <ion-button shape="round" class="add" size="small" >
+        <ion-icon  name="add" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-label class="ion-padding-horizontal">New community</ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-avatar color="light" class="avatar-container">
+          <img src="../../assets/images/career.jpg" alt="New community" />
+        </ion-avatar>
+        <ion-label class="ion-padding-horizontal"
+          >30 Days CS B1 Challenge</ion-label
+        >
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-avatar color="light" class="avatar-container">
+          <img
+            src="../../assets/images/anouncement.jpeg"
+            alt="New community"
+            height="40"
+            width="40"
+          />
+        </ion-avatar>
+        <ion-label class="ion-padding-horizontal">
+          <ion-text color="dark">Announcements</ion-text>
+          <p>~NOVITECH:</p></ion-label
+        >
+        <div class="note-badge">
+          <ion-note slot="end">9:22 am</ion-note>
+
+          <ion-badge slot="end" color="primary" class="round-badge"></ion-badge>
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item lines="none">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        <ion-label class="ion-padding-horizontal" color="medium">
+          View all
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
 </ion-content>

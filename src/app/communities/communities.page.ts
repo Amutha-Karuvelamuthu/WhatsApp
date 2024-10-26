@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonButtons, IonIcon, IonCard, IonAvatar } from '@ionic/angular/standalone';
-import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonButtons, IonIcon, IonCard, IonAvatar, IonBadge, IonItem, IonLabel, IonList, IonText, IonNote } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { qrCodeOutline, cameraOutline, ellipsisVertical } from 'ionicons/icons';
+import { qrCodeOutline, cameraOutline, ellipsisVertical, chevronForwardOutline, add } from 'ionicons/icons';
 
 @Component({
   selector: 'app-tab3',
   templateUrl: 'communities.page.html',
   styleUrls: ['communities.page.scss'],
   standalone: true,
-  imports: [IonAvatar, IonCard, IonIcon, IonButtons, IonButton, IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent],
+  imports: [IonNote, IonText, IonList, IonLabel, IonItem, IonBadge, IonAvatar, IonCard, IonIcon, IonButtons, IonButton, IonHeader, IonToolbar, IonTitle, IonContent],
 })
 export class CommunitiesPage {
   constructor() {
-    addIcons({qrCodeOutline,cameraOutline,ellipsisVertical});
+    addIcons({qrCodeOutline,cameraOutline,ellipsisVertical,add,chevronForwardOutline});
   }
 }

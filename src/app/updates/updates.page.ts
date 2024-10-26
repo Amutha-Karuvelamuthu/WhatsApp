@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonButton, IonIcon, IonAvatar, IonBadge, IonItem, IonLabel, IonText, IonList, IonAccordion, IonAccordionGroup, IonFab, IonFabButton } from '@ionic/angular/standalone';
-import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 import { addIcons } from 'ionicons';
-import { camera, cameraOutline, ellipsisVertical, search, pencil, qrCodeOutline } from 'ionicons/icons';
+import { camera, cameraOutline, ellipsisVertical, search, pencil, qrCodeOutline, add } from 'ionicons/icons';
 import { CommonModule } from '@angular/common';
 import { BannerComponent } from "../banner/banner.component";
 
@@ -11,12 +10,12 @@ import { BannerComponent } from "../banner/banner.component";
   templateUrl: 'updates.page.html',
   styleUrls: ['updates.page.scss'],
   standalone: true,
-  imports: [IonFabButton, IonFab, IonAccordionGroup, IonAccordion, CommonModule, IonList, IonText, IonLabel, IonItem, IonBadge, IonAvatar, IonIcon, IonButton, IonButtons, IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent, BannerComponent]
+  imports: [IonFabButton, IonFab, IonAccordionGroup, IonAccordion, CommonModule, IonList, IonText, IonLabel, IonItem, IonBadge, IonAvatar, IonIcon, IonButton, IonButtons, IonHeader, IonToolbar, IonTitle, IonContent, BannerComponent]
 })
 export class UpdatesPage {
   slides:any[]=[]
   constructor() {
-    addIcons({qrCodeOutline,cameraOutline,search,ellipsisVertical,pencil,camera});
+    addIcons({qrCodeOutline,cameraOutline,search,ellipsisVertical,add,pencil,camera});
     this.slides=[
       {
         banner:"../assets/images/whatsapp2.jpeg",
