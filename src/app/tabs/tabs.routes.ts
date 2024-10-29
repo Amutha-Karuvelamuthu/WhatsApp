@@ -7,7 +7,7 @@ export const routes :Routes =[
     children:[
         {
             path:'chats',
-            loadComponent:()=> import('../chats/chats.page').then( m => m.ChatsPage)
+            loadComponent:()=> import('../chats/chats.page').then( m => m.ChatsPage),
         },
         {
             path:'updates',

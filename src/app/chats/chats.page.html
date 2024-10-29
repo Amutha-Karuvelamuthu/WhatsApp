@@ -4,10 +4,10 @@
      WhatsApp
     </ion-title>
     <ion-buttons slot="end" color="light"  class="ion-no-padding-horizontal">
-      <ion-button>
+      <ion-button (click)="startscan()">
         <ion-icon name="qr-code-outline"></ion-icon>
       </ion-button>
-    <ion-button  >
+    <ion-button (click)="takePicture()" id="trigger-modal" >
     <ion-icon slot="icon-only" name="camera-outline" class="ion-padding"></ion-icon>
     </ion-button>
     <ion-button id="trigger-popover" >
@@ -57,7 +57,7 @@
   
   <ion-list class="ion-no-padding">
  
-    <ion-item lines="none" *ngFor="let contact of contacts">
+    <ion-item lines="none" *ngFor="let contact of contacts" (click)="navigateToChat(contact)">
       <ion-avatar class="avatar-container">
         <img [src]="contact.img" alt="">
       </ion-avatar>
@@ -94,5 +94,15 @@
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M440-400h80v-120h120v-80H520v-120h-80v120H320v80h120v120ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg>
     </ion-fab-button>
   </ion-fab>
-  
+  <ion-modal #modal trigger="trigger-modal" >
+   
+  <div *ngIf="picture">
+    <ion-row>
+    <ion-col size="3" sizeSm="3">
+    <img [src]="picture" alt="">
+  </ion-col>
+</ion-row>
+<ion-button expand="block" (click)="modal.dismiss()">Close</ion-button>
+  </div>
+</ion-modal>
 </ion-content>
