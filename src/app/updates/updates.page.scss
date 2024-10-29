@@ -4,25 +4,25 @@
 }
 .avatar-container ion-button{
     position: absolute;
-    // transform: translateX(50%);
     transform: translateY(50%);
-
     margin-bottom:1px;
     left: 20px;
 }
 .recent ion-avatar{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     position: relative;
     padding:2px;
-    border: 2px dashed #00a884;
+    border: 2px solid #00a884;
 }
 .viewed ion-avatar{
     padding: 2px;
     border: 2px solid rgb(193, 191, 194);
-
+    width: 60px;
+    height: 60px;
 }
 ion-fab-button{
     color:white;
-    --border-radius: 15px;
+    --border-radius: 13px;
+    --box-shadow:none;
 }

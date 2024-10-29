@@ -18,47 +18,57 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-item lines="none" class="ion-no-padding-horizontal">
-    <div #metaAI id ="metaAI" class="ion-no-padding"></div>
-    <ion-searchbar searchIcon="undefined"  color="light" placeholder="Ask Meta AI of Search" class="ion-no-border ion-no-padding-horizontal">
-    </ion-searchbar>
+  <ion-list lines="none" class="ion-padding-horizontal">
+    <ion-item class="item-container">
+    <div #metaAI id ="metaAI" ></div>
+    <ion-input placeholder="Ask Meta AI or Search" class="searchbar">
+     
+    </ion-input>
   </ion-item>
+  </ion-list>
  
   <div class="ion-padding">
-  <ion-chip  shape="round" color="success" >All</ion-chip>
-  <ion-chip  shape="round">Unread</ion-chip>
-  <ion-chip  shape="round">Favourites</ion-chip>
-  <ion-chip  shape="round">Groups</ion-chip>
+  <ion-chip  shape="round" color="success">All</ion-chip>
+  <ion-chip  shape="round" color="medium">Unread</ion-chip>
+  <ion-chip  shape="round" color="medium">Favourites</ion-chip>
+  <ion-chip  shape="round" color="medium">Groups</ion-chip>
   </div>
   
   <ion-list class="ion-no-padding">
-  
+  <ion-item lines="none" class="ion-no-padding">
+    <ion-icon name="archive-outline" color="dark" class="ion-padding-horizontal"></ion-icon>
+    <ion-label class="ion-padding"><b>Archived</b></ion-label>
+  </ion-item>
     <ion-item lines="none" *ngFor="let contact of contacts">
-      <ion-avatar>
+      <ion-avatar class="avatar-container">
         <img [src]="contact.img" alt="">
       </ion-avatar>
       <ion-label color="dark" class="ion-padding-horizontal">
 
-        <ion-text class="name">{{contact.name}}</ion-text>      
+        <ion-text class="name"><b>{{contact.name}}</b></ion-text>      
 
       <p class="msg" >
         <ion-icon *ngIf="!contact.badge == true" name="checkmark-done" slot="start" [color]="contact.checkmark ? 'secondary':'medium'">
         </ion-icon>{{contact.msg}}</p>
     </ion-label>
     <div class="note-badge">
-      <ion-note slot="end" [color]="contact.badge ? 'success':'medium'" >{{contact?.date}}</ion-note>
+      <ion-note slot="end" [color]="contact.badge ? 'success':'medium'" >{{contact?.date}}</ion-note><br>
     
       <ion-badge slot="end" *ngIf="contact.status == true" color="primary" class="round-badge">{{contact.badge}}</ion-badge>
     </div>
     </ion-item>
     <ion-item-divider class="ion-no-padding-vertical"></ion-item-divider>
-  <ion-note class="font-style ion-padding"><i class="material-icons icon-custom ion-no-padding-vertical">lock</i>
-    Your personal calls are <span>end-to-end encrypted</span></ion-note>
+  <ion-label class="ion-text-center">
+    <p>
+      <ion-icon name="lock-closed-outline" ></ion-icon>
+      Your personal calls are <ion-text color="primary">end-to-end encrypted</ion-text>
+    </p>
+  </ion-label>
     
 
   </ion-list>
   <ion-fab slot="fixed" horizontal="end" vertical="bottom">
-    <ion-fab-button color="light" size="small">
+    <ion-fab-button color="light" size="small" class="ion-margin-vertical">
       <img src="../../assets/images/meta-logo.jpeg" height="30px" width="30px">
     </ion-fab-button>
     <ion-fab-button color="primary">

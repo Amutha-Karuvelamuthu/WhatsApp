@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonIcon, IonSearchbar, IonButton, IonList, IonItem, IonAvatar, IonButtons, IonLabel, IonChip, IonText, IonNote, IonBadge, IonFab, IonFabButton, IonImg, IonItemDivider, IonInput } from '@ionic/angular/standalone';
-import { camera,  cameraOutline, ellipsisVertical, checkmarkDone, pencil, qrCodeOutline, lockClosedOutline } from 'ionicons/icons';
+import { camera,  cameraOutline, ellipsisVertical, checkmarkDone, pencil, qrCodeOutline, lockClosedOutline, archive, archiveOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 import { CommonModule } from '@angular/common';
 import lottieweb from 'lottie-web'
@@ -16,7 +16,7 @@ import Lottie from 'lottie-web';
 export class ChatsPage implements AfterViewInit {
   @ViewChild('metaAI',{static:true}) metaAI!:ElementRef<HTMLDivElement>
   constructor() {
-    addIcons({qrCodeOutline,cameraOutline,ellipsisVertical,checkmarkDone,lockClosedOutline,camera,pencil});
+    addIcons({qrCodeOutline,cameraOutline,ellipsisVertical,archiveOutline,checkmarkDone,lockClosedOutline,camera,pencil});
   }
 contacts:any[] =[
     { name:"Shay Rich",img:"../assets/images/profile1.jpeg",msg:"Good morning",date:"7:37 am",status:true,badge:"2"},
@@ -27,13 +27,13 @@ contacts:any[] =[
     { name:"Shay Rich",img:"../assets/images/profile1.jpeg",msg:"Good morning",date:"22/10/24",status:true,badge:"2"},
     { name:"Miller Gardner",img:"../assets/images/profile2.jpeg",msg:"Good morning",date:"20/10/24",status:false,checkmark:true},
     { name:"Jake Golden",img:"../assets/images/profile3.jpeg",msg:"Good morning",date:"04/09/24",status:false},
-    { name:"Alice Peck",img:"../assets/images/profile4.jpeg",msg:"I saw a meme that totally reminded me of you! 😂",date:"04/09/24",status:false,checkmark:true},
+    { name:"Alice Peck",img:"../assets/images/profile4.jpeg",msg:"I saw a meme ",date:"04/09/24",status:false,checkmark:true},
     { name:"Cadence Bell",img:"../assets/images/profile5.jpeg",msg:"Good morning",date:"04/09/24",status:true,badge:"1"},
     { name:"Cadence Bell",img:"../assets/images/profile5.jpeg",msg:"Ok",date:"24/10/24",status:true,badge:"1",checkmark:true},
     { name:"Shay Rich",img:"../assets/images/profile1.jpeg",msg:"Good morning",date:"22/10/24",status:true,badge:"2"},
     { name:"Miller Gardner",img:"../assets/images/profile2.jpeg",msg:"Good morning",date:"20/10/24",status:false,checkmark:true},
     { name:"Jake Golden",img:"../assets/images/profile3.jpeg",msg:"Good morning",date:"04/09/24",status:false},
-    { name:"Alice Peck",img:"../assets/images/profile4.jpeg",msg:"I saw a meme that totally reminded me of you! 😂",date:"04/09/24",status:false,checkmark:true},
+    { name:"Alice Peck",img:"../assets/images/profile4.jpeg",msg:"I saw a meme ",date:"04/09/24",status:false,checkmark:true},
     { name:"Cadence Bell",img:"../assets/images/profile5.jpeg",msg:"Good morning",date:"04/09/24",status:true,badge:"1"},
 
   ]

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonButtons, IonIcon, IonCard, IonAvatar, IonBadge, IonItem, IonLabel, IonList, IonText, IonNote } from '@ionic/angular/standalone';
+import { IonThumbnail,IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonButtons, IonIcon, IonCard, IonAvatar, IonBadge, IonItem, IonLabel, IonList, IonText, IonNote } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { qrCodeOutline, cameraOutline, ellipsisVertical, chevronForwardOutline, add } from 'ionicons/icons';
 
@@ -8,7 +8,7 @@ import { qrCodeOutline, cameraOutline, ellipsisVertical, chevronForwardOutline, 
   templateUrl: 'communities.page.html',
   styleUrls: ['communities.page.scss'],
   standalone: true,
-  imports: [IonNote, IonText, IonList, IonLabel, IonItem, IonBadge, IonAvatar, IonCard, IonIcon, IonButtons, IonButton, IonHeader, IonToolbar, IonTitle, IonContent],
+  imports: [IonThumbnail,IonNote, IonText, IonList, IonLabel, IonItem, IonBadge, IonAvatar, IonCard, IonIcon, IonButtons, IonButton, IonHeader, IonToolbar, IonTitle, IonContent],
 })
 export class CommunitiesPage {
   constructor() {

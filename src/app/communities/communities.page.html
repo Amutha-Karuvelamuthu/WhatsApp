@@ -21,26 +21,27 @@
 
 <ion-content [fullscreen]="true">
   <ion-card>
-    <ion-item>
+    <ion-item lines="none">
       <p class="groups"  >
         <span class="material-symbols-outlined"
           >groups</span>
+          <ion-button shape="round" class="add" >
+            <ion-icon  name="add" slot="icon-only"></ion-icon>
+          </ion-button>
       </p>
 
-      <ion-button shape="round" class="add" size="small" >
-        <ion-icon  name="add" slot="icon-only"></ion-icon>
-      </ion-button>
-      <ion-label class="ion-padding-horizontal">New community</ion-label>
+     
+      <ion-label class="ion-padding-horizontal"><b>New community</b></ion-label>
     </ion-item>
   </ion-card>
   <ion-card>
     <ion-list>
       <ion-item>
-        <ion-avatar color="light" class="avatar-container">
+        <ion-thumbnail color="light" class="avatar-container">
           <img src="../../assets/images/career.jpg" alt="New community" />
-        </ion-avatar>
-        <ion-label class="ion-padding-horizontal"
-          >30 Days CS B1 Challenge</ion-label
+        </ion-thumbnail>
+        <ion-label class="ion-padding-horizontal">
+          <b>30 Days CS B1 Challenge</b></ion-label
         >
       </ion-item>
     </ion-list>
@@ -55,9 +56,9 @@
           />
         </ion-avatar>
         <ion-label class="ion-padding-horizontal">
-          <ion-text color="dark">Announcements</ion-text>
-          <p>~NOVITECH:</p></ion-label
-        >
+          <ion-text color="dark"><b>Announcements</b></ion-text>
+          <p><span>~NOVITECH:</span> Hello guys </p>
+          </ion-label>
         <div class="note-badge">
           <ion-note slot="end">9:22 am</ion-note>
 

@@ -23,7 +23,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <h2 class="ion-padding-horizontal">Status</h2>
+  <h4 class="ion-padding-horizontal">Status</h4>
   <ion-item lines="none">
     <ion-avatar class="avatar-container">
       <img src="../../assets/images/profile1.jpeg" />
@@ -32,20 +32,22 @@
       </ion-button>
     </ion-avatar>
     <ion-label class="ion-padding-horizontal">
-      <ion-text color="dark">My status</ion-text>
+      <ion-text color="dark"><b>My status</b></ion-text>
       <p>Tap to add status update</p>
     </ion-label>
   </ion-item>
-  <ion-text color="medium">
-    <p class="ion-padding-horizontal">Recent updates</p>
-  </ion-text>
   <ion-list lines="none">
+    <ion-list-header>
+  <ion-text color="medium">
+    <p class=""><b>Recent updates</b></p>
+  </ion-text>
+</ion-list-header>
     <ion-item lines="none" *ngFor="let contact of recent" class="recent">
       <ion-avatar>
         <img [src]="contact.img" />
       </ion-avatar>
       <ion-label class="ion-padding-horizontal"
-        ><ion-text> {{contact.name}} </ion-text>
+        ><ion-text><b> {{contact.name}}</b> </ion-text>
         <p>{{contact.date}}</p></ion-label
       >
     </ion-item>
@@ -54,29 +56,30 @@
   <ion-accordion-group>
     <ion-accordion value="first">
       <ion-item slot="header" lines="none">
-        <ion-label color="medium">Viewed updates</ion-label>
+        <ion-label color="medium" class="ion-no-padding-vertical"><p><b>Viewed updates</b></p></ion-label>
       </ion-item>
       <div slot="content" class="viewed">
         <ion-item lines="none" *ngFor="let contact of viewed">
           <ion-avatar>
             <img [src]="contact.img" />
           </ion-avatar>
-          <ion-label class="ion-padding-horizontal">
-            <ion-text>{{contact.name}}</ion-text>
+          <ion-label class="ion-padding-horizontal" >
+            <ion-text><b>{{contact.name}}</b></ion-text>
             <p>{{contact.date}}</p>
           </ion-label>
         </ion-item>
       </div>
     </ion-accordion>
   </ion-accordion-group>
-  <h3 class="ion-padding-horizontal">Channels</h3>
+  <h4 class="ion-padding-horizontal">Channels</h4>
   <ion-list class="ion-padding">
-  <!-- <ion-label class="ion-padding-horizontal" color="medium">
+  <ion-label  color="medium">
     Stay updated on topics that matter to you. Find channels to follow below.
-  </ion-label> -->
+  </ion-label> 
 </ion-list>
   <app-banner [slides]="slides"></app-banner>
-  <ion-button color="primary" shape="round" [strong]="true">Explore More</ion-button>
+  <ion-button color="primary" shape="round" [strong]="true" class="ion-padding-horizontal">
+    <ion-text>Explore More</ion-text></ion-button>
   <ion-fab slot="fixed" horizontal="end" vertical="bottom">
     <ion-fab-button color="light" size="small">
       <ion-icon name="pencil"></ion-icon>
