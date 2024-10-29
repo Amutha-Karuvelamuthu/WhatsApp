@@ -1,17 +1,18 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonIcon, IonSearchbar, IonButton, IonList, IonItem, IonAvatar, IonButtons, IonLabel, IonChip, IonText, IonNote, IonBadge, IonFab, IonFabButton, IonImg, IonItemDivider, IonInput } from '@ionic/angular/standalone';
+import { IonHeader,IonListHeader,IonSelectOption,IonSelect,IonPopover, IonToolbar, IonTitle, IonContent, IonIcon, IonSearchbar, IonButton, IonList, IonItem, IonAvatar, IonButtons, IonLabel, IonChip, IonText, IonNote, IonBadge, IonFab, IonFabButton, IonImg, IonItemDivider, IonInput } from '@ionic/angular/standalone';
 import { camera,  cameraOutline, ellipsisVertical, checkmarkDone, pencil, qrCodeOutline, lockClosedOutline, archive, archiveOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 import { CommonModule } from '@angular/common';
 import lottieweb from 'lottie-web'
 import Lottie from 'lottie-web';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'chats.page.html',
   styleUrls: ['chats.page.scss'],
   standalone: true,
-  imports: [IonInput, IonItemDivider, IonImg, IonFabButton, IonFab, CommonModule,IonBadge, IonNote, IonText, IonChip, IonLabel, IonButtons, IonAvatar, IonItem, IonList, IonButton, IonSearchbar, IonIcon, IonHeader, IonToolbar, IonTitle, IonContent],
+  imports: [RouterLink, IonInput,IonSelectOption, IonListHeader,IonPopover,IonSelect, IonItemDivider, IonImg, IonFabButton, IonFab, CommonModule,IonBadge, IonNote, IonText, IonChip, IonLabel, IonButtons, IonAvatar, IonItem, IonList, IonButton, IonSearchbar, IonIcon, IonHeader, IonToolbar, IonTitle, IonContent],
 })
 export class ChatsPage implements AfterViewInit {
   @ViewChild('metaAI',{static:true}) metaAI!:ElementRef<HTMLDivElement>
