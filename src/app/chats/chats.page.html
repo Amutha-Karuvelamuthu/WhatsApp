@@ -4,7 +4,7 @@
      WhatsApp
     </ion-title>
     <ion-buttons slot="end" color="light"  class="ion-no-padding-horizontal">
-      <ion-button (click)="startscan()">
+      <ion-button >
         <ion-icon name="qr-code-outline"></ion-icon>
       </ion-button>
     <ion-button (click)="takePicture()" id="trigger-modal" >
@@ -42,7 +42,7 @@
   </ion-item>
   </ion-list>
  
-  <div class="ion-padding">
+  <div class="ion-padding-horizontal">
   <ion-chip  shape="round" color="success">All</ion-chip>
   <ion-chip  shape="round" color="medium">Unread</ion-chip>
   <ion-chip  shape="round" color="medium">Favourites</ion-chip>
@@ -51,7 +51,7 @@
   <ion-list-header>
     <ion-item lines="none" class="ion-no-padding">
       <ion-icon name="archive-outline" color="dark" class="ion-padding-horizontal"></ion-icon>
-      <ion-label class="ion-padding"><b>Archived</b></ion-label>
+      <ion-label class="ion-padding-horizontal"><b>Archived</b></ion-label>
     </ion-item>
   </ion-list-header>
   

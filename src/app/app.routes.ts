@@ -10,7 +10,7 @@ export const routes: Routes = [
     loadComponent: () => import('./settings/settings.page').then( m => m.SettingsPage)
   },
   {
-    path: 'chat/:id',
+    path: 'chat/:name/:img',
     loadComponent: () => import('./chat-detail/chat-detail.page').then( m => m.ChatDetailPage)
   },
  

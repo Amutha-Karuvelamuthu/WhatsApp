@@ -1,12 +1,54 @@
-<ion-header [translucent]="true" class="ion-no-border" >
+<ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
-    <ion-avatar>
+    <ion-back-button slot="start" [defaultHref]="['/tabs/chats']"></ion-back-button>
+    <ion-item lines="none">
+    <ion-avatar slot="start">
       <img [src]="contactImg" alt="">
     </ion-avatar>
-    <ion-title>{{contactName}}</ion-title>
+    <ion-label>{{contactName}}</ion-label>
+  </ion-item>
+   
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="videocam-outline" slot="end"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="call-outline" slot="end"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="ellipsis-vertical" slot="end"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  
+<ion-content class="ion-no-scroll">
+  <img src="assets/images/chat-background.jpg" height="100%" width="100%" > 
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    
+    <ion-list>
+      <ion-item lines="none">
+        <span class="material-symbols-outlined">
+          mood
+          </span>
+        <ion-input class="ion-margin-start " placeholder="Message"></ion-input>
+        <span class="material-symbols-outlined">
+          attach_file
+          </span>
+          <span class="material-symbols-outlined ion-margin">
+            currency_rupee_circle
+            </span>
+         
+         <span class="material-symbols-outlined">
+          photo_camera
+          </span>
+            <ion-button slot="end" shape="round" size="medium" >
+              <ion-icon slot="icon-only" name="mic-outline" ></ion-icon>
+            </ion-button>
+      </ion-item>
+    </ion-list>
+    
+  </ion-toolbar>
+</ion-footer>
