@@ -15,10 +15,22 @@
       <ion-button>
         <ion-icon slot="icon-only" name="search"></ion-icon>
       </ion-button>
-      <ion-button>
+      <ion-button id="updates-popover">
         <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
       </ion-button>
     </ion-buttons>
+    <!-- popover -->
+    <ion-popover trigger="updates-popover" triggerAction="click" [dismissOnSelect]="true" >
+      <ng-template>
+        <ion-content>
+          <ion-list>           
+            <ion-item [button]="true" lines="none">Status privacy</ion-item>
+            <ion-item [button]="true" lines="none">Create channel</ion-item>
+            <ion-item [button]="true" lines="none" [routerLink]="['/settings']">Settings</ion-item>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+     </ion-popover>
   </ion-toolbar>
 </ion-header>
 

@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonIcon, IonButton, IonList, IonListHeader, IonItem, IonLabel, IonText, IonAvatar, IonNote, IonItemDivider, IonFabButton, IonFab } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle,IonPopover, IonToolbar, IonButtons, IonIcon, IonButton, IonList, IonListHeader, IonItem, IonLabel, IonText, IonAvatar, IonNote, IonItemDivider, IonFabButton, IonFab } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { heart, qrCodeOutline, cameraOutline, ellipsisVertical, videocamOutline, lockClosedOutline } from 'ionicons/icons';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-calls',
   templateUrl: './calls.page.html',
   styleUrls: ['./calls.page.scss'],
   standalone: true,
-  imports: [IonFab, IonFabButton, IonItemDivider, IonNote, IonAvatar, IonText, IonLabel, IonItem, IonListHeader, IonList, IonButton, IonIcon, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonFab, IonFabButton,RouterLink,IonPopover, IonItemDivider, IonNote, IonAvatar, IonText, IonLabel, IonItem, IonListHeader, IonList, IonButton, IonIcon, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class CallsPage implements OnInit {
 

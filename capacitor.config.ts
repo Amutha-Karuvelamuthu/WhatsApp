@@ -13,6 +13,7 @@ const config: CapacitorConfig = {
       iosSpinnerStyle: "small",     
       splashFullScreen: true,
       splashImmersive: true,
+      
      
     },
   },

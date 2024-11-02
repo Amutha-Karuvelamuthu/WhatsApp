@@ -12,10 +12,19 @@
           class="ion-padding"
         ></ion-icon>
       </ion-button>
-      <ion-button>
+      <ion-button id="community-popover">
         <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
       </ion-button>
     </ion-buttons>
+    <ion-popover trigger="community-popover" triggerAction="click" [dismissOnSelect]="true" >
+      <ng-template>
+        <ion-content>
+          <ion-list>
+            <ion-item [button]="true" lines="none" [routerLink]="['/settings']">Settings</ion-item>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+     </ion-popover>
   </ion-toolbar>
 </ion-header>
 

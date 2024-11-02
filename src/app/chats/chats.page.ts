@@ -28,9 +28,9 @@ contacts:any[] =[
     { name:"Shay",img:"../assets/images/profile1.jpeg",msg:"Good morning",date:"7:37 am",status:true,badge:"2"},
     { name:"Gardner",img:"../assets/images/profile3.jpeg",msg:"What's going on?",date:"Yesterday",status:false,checkmark:true},
     { name:"Golden",img:"../assets/images/profile4.jpeg",msg:"Just finished a good book. Got any recommendations?",date:"Yesterday",status:false},
-    { name:"Alice ",img:"../assets/images/profile2.jpeg",msg:"Can’t believe it’s already Friday! Any plans for the weekend?",date:"24/10/24",status:false},
+    { name:"Alice ",img:"../assets/images/profile2.jpeg",msg:"Can’t believe it’s already...",date:"24/10/24",status:false},
     { name:"Cadence",img:"../assets/images/profile5.jpeg",msg:"Ok",date:"24/10/24",status:true,badge:"1",checkmark:true},
-    { name:"Chan",img:"../assets/images/profile6.jpeg",msg:"Good morning",date:"22/10/24",status:true,badge:"2"},
+    { name:"Chan",img:"../assets/images/profile6.jpeg",msg:" Any plans for the weekend?",date:"22/10/24",status:true,badge:"2"},
     { name:"Mill",img:"../assets/images/profile7.jpeg",msg:"Good morning",date:"20/10/24",status:false,checkmark:true},
     { name:"Jake ",img:"../assets/images/profile8.png",msg:"Good morning",date:"04/09/24",status:false},
     { name:"Peck",img:"../assets/images/profile9.jpeg",msg:"I saw a meme ",date:"04/09/24",status:false,checkmark:true},
@@ -59,7 +59,7 @@ contacts:any[] =[
   async takePicture(){
     const image = await Camera.getPhoto({
       quality: 100,
-      allowEditing: true,
+      allowEditing: undefined,
       resultType:CameraResultType.DataUrl
     })
     this.isPicture = !this.isPicture
