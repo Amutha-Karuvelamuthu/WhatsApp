@@ -1,11 +1,11 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { IonHeader,IonListHeader,IonRow, IonCol,IonModal, IonSelectOption,IonSelect,IonPopover, IonToolbar, IonTitle, IonContent, IonIcon, IonSearchbar, IonButton, IonList, IonItem, IonAvatar, IonButtons, IonLabel, IonChip, IonText, IonNote, IonBadge, IonFab, IonFabButton, IonImg, IonItemDivider, IonInput } from '@ionic/angular/standalone';
-import { camera,  cameraOutline, ellipsisVertical, checkmarkDone, pencil, qrCodeOutline, lockClosedOutline, archive, archiveOutline } from 'ionicons/icons';
+import { camera,  cameraOutline, ellipsisVertical, checkmarkDone, pencil, qrCodeOutline, lockClosedOutline, archive, archiveOutline, ellipsisHorizontal } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 import { CommonModule } from '@angular/common';
 import Lottie from 'lottie-web';
 import { Router, RouterLink } from '@angular/router';
-import { Camera, CameraResultType } from '@capacitor/camera'
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera'
 
 
 
@@ -22,11 +22,11 @@ export class ChatsPage implements AfterViewInit {
   isPicture:boolean=false;
   savedImageUri: any;
   constructor(private router:Router) {
-    addIcons({qrCodeOutline,cameraOutline,ellipsisVertical,archiveOutline,checkmarkDone,lockClosedOutline,camera,pencil});
+    addIcons({qrCodeOutline,cameraOutline,ellipsisHorizontal,archiveOutline,checkmarkDone,lockClosedOutline,ellipsisVertical,camera,pencil});
   }
 contacts:any[] =[
     { name:"Shay",img:"../assets/images/profile1.jpeg",msg:"Good morning",date:"7:37 am",status:true,badge:"2"},
-    { name:"Gardner",img:"../assets/images/profile3.jpeg",msg:"What's going on?",date:"Yesterday",status:false,checkmark:true},
+    { name:"Gardner",img:"../assets/images/profile13.jpg",msg:"What's going on?",date:"Yesterday",status:false,checkmark:true},
     { name:"Golden",img:"../assets/images/profile4.jpeg",msg:"Just finished a good book. Got any recommendations?",date:"Yesterday",status:false},
     { name:"Alice ",img:"../assets/images/profile2.jpeg",msg:"Can’t believe it’s already...",date:"24/10/24",status:false},
     { name:"Cadence",img:"../assets/images/profile5.jpeg",msg:"Ok",date:"24/10/24",status:true,badge:"1",checkmark:true},
@@ -60,6 +60,7 @@ contacts:any[] =[
     const image = await Camera.getPhoto({
       quality: 100,
       allowEditing: undefined,
+      source:CameraSource.Camera,
       resultType:CameraResultType.DataUrl
     })
     this.isPicture = !this.isPicture
